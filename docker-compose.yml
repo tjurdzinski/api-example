@@ -13,6 +13,8 @@ services:
         working_dir: /var/www/
         volumes:
             - ./:/var/www
+        environment:
+            DB_PASSWORD: cImzf6aodMMulOxlP7WEbCO7DjuD2T8e
         networks:
             - api-example-network
     db:
@@ -21,7 +23,7 @@ services:
         restart: unless-stopped
         environment:
             MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_ROOT_PASSWORD: cImzf6aodMMulOxlP7WEbCO7DjuD2T8e
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
         volumes:
