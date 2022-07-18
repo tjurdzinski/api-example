@@ -26,8 +26,6 @@ services:
             MYSQL_ROOT_PASSWORD: cImzf6aodMMulOxlP7WEbCO7DjuD2T8e
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
-        volumes:
-            - ./docker-compose/mysql:/docker-entrypoint-initdb.d
         networks:
             - api-example-network
     nginx:

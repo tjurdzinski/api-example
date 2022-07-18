@@ -10,7 +10,9 @@ class VacancyRepository
 {
     public function getAll(): Collection
     {
-        return Vacancy::all();
+        return Vacancy::query()
+            ->orderBy('date')
+            ->get();
     }
 
     public function getById(string $id, string $userId): Vacancy|null

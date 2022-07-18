@@ -74,11 +74,11 @@ class VacancyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \App\Http\Requests\UpdateVacancyRequest $request
+     * @param Request $request
      * @param \App\Models\Vacancy $vacancy
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function update(UpdateVacancyRequest $request, Vacancy $vacancy): JsonResponse
+    public function update(Request $request, Vacancy $vacancy): JsonResponse
     {
         //
     }

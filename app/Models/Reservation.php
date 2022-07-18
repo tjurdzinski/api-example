@@ -71,6 +71,13 @@ class Reservation extends Model
         'confirmed' => 'boolean',
     ];
 
+    public function toArray()
+    {
+        $result = parent::toArray();
+        $result['vacancies'] = $this->vacancies;
+        return $result;
+    }
+
     public function vacancies(): BelongsToMany
     {
         return $this->belongsToMany(Vacancy::class, 'reservation_vacancy');
