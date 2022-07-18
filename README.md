@@ -3,6 +3,14 @@ Example simple API written in PHP with Laravel
 
 # How to run?
 
+```bash
+make prepare
+```
+
+**Warning**: Sometimes mysql gets restart after run, then command 'refresh-database' fails. If it failed please manually run "make refresh-database".
+
+# Commands to manage environment
+
 Build containers:
 ```bash
 make build
@@ -18,12 +26,17 @@ Stop app:
 make down
 ```
 
+Refresh database:
+```bash
+make refresh-database
+```
+
 Remove app:
 ```bash
 make rm
 ```
 
-Run unit tests:
+# How to run unit tests:
 ```bash
 make test
 ```
